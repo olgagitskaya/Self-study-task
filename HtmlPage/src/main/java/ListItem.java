@@ -20,5 +20,4 @@ public class ListItem {
     {
         return "<li>" + listItem + "</li>";
     }
-
 }
