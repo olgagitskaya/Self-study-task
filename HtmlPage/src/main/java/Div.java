@@ -12,10 +12,14 @@ public class Div {
     ArrayList<ListItem> list = new ArrayList<ListItem>();
     //ArrayList<String> listItems = new ArrayList<String>();
 
-    public Div()
+    public Div(String text, String linkText, String linkDescription, String listItem)
     {
-        list.add(new ListItem(this.listItem));
-        linkList.add(new Link(this.linkText, this.linkDescription));
+        this.text = text;
+        this.linkText = linkText;
+        this.linkDescription = linkDescription;
+        this.listItem = listItem;
+        list.add(new ListItem(listItem));
+        linkList.add(new Link(linkText, linkDescription));
     }
 
     public String toString()
@@ -26,14 +30,12 @@ public class Div {
         for(ListItem item : list)
         {
             itemResult = item.toString();
-            return itemResult;
         }
         for(Link link : linkList)
         {
             linkresult = link.toString();
-            return linkresult;
         }
 
-        return "<div>" + text + "<ul>" + itemResult + "</ul>" + linkresult + "</div";
+        return "<div>\n" + text + "\n<ul>\n" + itemResult + "</ul>\n" + linkresult + "</div>\n";
     }
 }

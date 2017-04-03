@@ -13,6 +13,6 @@ public class Link {
 
     public String toString()
     {
-        return "<a href=\"" + linkText + "\">" + "</a>";
+        return "<a href=\"" + linkText + "\">" + linkDescription + "</a>\n";
     }
 }

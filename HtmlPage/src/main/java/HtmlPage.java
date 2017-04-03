@@ -16,7 +16,7 @@ public class HtmlPage {
         this.linkText = linkText;
         this.linkDescription = linkDescription;
         this.listItem = listItem;
-        divList.add(new Div());
+        divList.add(new Div(text, linkText, linkDescription, listItem));
     }
 
     public String toString()
@@ -26,8 +26,7 @@ public class HtmlPage {
         for(Div div : divList)
         {
             divResult = div.toString();
-            return divResult;
         }
-        return "<html>" + "<body" + divResult + "</body>" + "</html>";
+        return "<html>\n" + "<body>\n" + divResult + "</body>\n" + "</html>";
     }
 }

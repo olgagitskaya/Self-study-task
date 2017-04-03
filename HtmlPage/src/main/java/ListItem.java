@@ -18,6 +18,6 @@ public class ListItem {
 
     public String toString()
     {
-        return "<li>" + listItem + "</li>";
+        return "<li>" + listItem + "</li>\n";
     }
 }
