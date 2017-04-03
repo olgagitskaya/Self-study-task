@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Created by Volha_Hitskaya on 4/3/2017.
  */
-public class HtmlPage {
+public class HtmlPage extends Div{
     String text;
     String linkText;
     String linkDescription;
@@ -12,10 +12,11 @@ public class HtmlPage {
 
     public HtmlPage(String text, String linkText,  String linkDescription, String listItem)
     {
-        this.text = text;
-        this.linkText = linkText;
-        this.linkDescription = linkDescription;
-        this.listItem = listItem;
+//        this.text = text;
+//        this.linkText = linkText;
+//        this.linkDescription = linkDescription;
+//        this.listItem = listItem;
+        super(text, listItem, linkText, linkDescription);
         divList.add(new Div(text, linkText, linkDescription, listItem));
     }
 
