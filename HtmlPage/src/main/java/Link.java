@@ -1,17 +1,19 @@
 /**
  * Created by Volha_Hitskaya on 4/3/2017.
  */
-public class Link {
-    String linkText;
-    String linkDescription;
+public class Link extends HtmlPage{
+
+    public Link()
+    {
+
+    }
 
     public Link(String linkText, String linkDescription)
     {
-        this.linkText = linkText;
-        this.linkDescription = linkDescription;
+       super(linkText, linkDescription);
     }
 
-    public String toString()
+    public String addLink(String linkText, String linkDescription)
     {
         return "<a href=\"" + linkText + "\">" + linkDescription + "</a>\n";
     }

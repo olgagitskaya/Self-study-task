@@ -1,1 +1,9 @@
-<html><body><div>Hello, this is my first html page.<ul><li>Item number 1</li></ul><a href="https://www.google.by">Search in google</a></div></body></html>
+<html>
+<body>
+<div>This is my first page.</div>
+<a href="www.google.com">Search in Google</a>
+<ul>
+    <li>Item number one</li>
+</ul>
+</body>
+</html>

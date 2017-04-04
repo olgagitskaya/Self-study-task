@@ -8,25 +8,37 @@ public class HtmlPage {
     String linkText;
     String linkDescription;
     String listItem;
-    ArrayList<Div> divList = new ArrayList<Div>();
+    int numberOfItems;
 
-    public HtmlPage(String text, String linkText,  String linkDescription, String listItem)
+
+    public HtmlPage()
     {
-        this.text = text;
-        this.linkText = linkText;
-        this.linkDescription = linkDescription;
-        this.listItem = listItem;
-        divList.add(new Div(text, linkText, linkDescription, listItem));
     }
 
-    public String toString()
+    public HtmlPage(String text)
     {
-        String divResult = "";
+        this.text = text;
+    }
 
-        for(Div div : divList)
-        {
-            divResult = div.toString();
-        }
-        return "<html>\n" + "<body>\n" + divResult + "</body>\n" + "</html>";
+    public HtmlPage(String linkText, String linkDescription)
+    {
+        this.linkText = linkText;
+        this.linkDescription = linkDescription;
+    }
+
+    public HtmlPage(String listItem, int numberOfItems)
+    {
+        this.listItem = listItem;
+        this.numberOfItems = numberOfItems;
+    }
+
+    public String addInitialPageTags()
+    {
+        return "<html>\n" + "<body>\n";
+    }
+
+    public String addClosingPageTags()
+    {
+        return "</body>\n" + "</html>";
     }
 }
